@@ -2,3 +2,9 @@ javascript:(function() {  var elements = document.querySelectorAll('input:disabl
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 (function(){var elements = document.querySelectorAll('input:disabled, select:disabled, button:disabled');elements.forEach(function(element){element.disabled = false;});})();
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+***Windows_Command***
+Commands : Get-WinEvent -LogName "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational" -MaxEvents 100 | Where-Object {$_.TimeCreated -ge (Get-Date).AddHours(-24)}
+URLS : netsh trace start capture=yes tracefile=C:\temp\httptrace.etl maxsize=1024 overwrite=yes tracefilemode=circular && timeout /t 86400 && netsh trace stop
+Connections : netstat -nab -p TCP | findstr /C:"ESTABLISHED" /C:"LISTENING" /C:"TIME_WAIT" /C:"CLOSE_WAIT" | findstr /V /C:"127.0.0.1" /C:"[::1]"
+User Log : Get-WinEvent -LogName Security -FilterXPath "*[System[(EventID=4624) and TimeCreated[timediff(@SystemTime) <= 86400000]]]" | Format-List TimeCreated, Message
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
