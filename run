@@ -8,3 +8,753 @@ URLS : netsh trace start capture=yes tracefile=C:\temp\httptrace.etl maxsize=102
 Connections : netstat -nab -p TCP | findstr /C:"ESTABLISHED" /C:"LISTENING" /C:"TIME_WAIT" /C:"CLOSE_WAIT" | findstr /V /C:"127.0.0.1" /C:"[::1]"
 User Log : Get-WinEvent -LogName Security -FilterXPath "*[System[(EventID=4624) and TimeCreated[timediff(@SystemTime) <= 86400000]]]" | Format-List TimeCreated, Message
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+└─$ adb logcat --pid=12921                                           
+--------- beginning of main
+10-29 20:13:13.062 12921 12921 E mobilesoftware: Not starting debugger since process cannot load the jdwp agent.
+10-29 20:13:13.121 12921 12938 D Typeface: Invalid or same font: 
+10-29 20:13:13.313 12921 12921 W mobilesoftwareg: type=1400 audit(0.0:760): avc: denied { read } for name="max_map_count" dev="proc" ino=130553 scontext=u:r:untrusted_app:s0:c226,c256,c512,c768 tcontext=u:object_r:proc_max_map_count:s0 tclass=file permissive=0
+10-29 20:13:13.333 12921 12947 I GPUD    : @gpudInitialize: successfully initialized with GL, dbg=0 mmdump_dbg=0 mmpath_dbg=0
+10-29 20:13:13.390 12921 12947 I flutter : [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+10-29 20:13:13.530 12921 12921 I SurfaceFactory: [static] sSurfaceFactory = com.mediatek.view.impl.SurfaceFactoryImpl@73269d5
+--------- beginning of system
+10-29 20:13:13.531 12921 12921 D AppResolutionTuner: loadTunerAppList + 
+10-29 20:13:13.534 12921 12921 D AppResolutionTuner: loadTunerAppList - 
+10-29 20:13:13.535 12921 12921 D SurfaceExt: initResolutionTunner, mPackageName:com.example.mobilesoftwareg,mContainPackageName:falsemXScaleValue:1.0,mYScaleValue:1.0
+10-29 20:13:13.610 12921 12921 W Activity: Can request only one set of permissions at a time
+10-29 20:13:13.629 12921 12921 D ViewRootImpl[MainActivity]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+10-29 20:13:13.635 12921 12921 V PhoneWindow: DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@66476cb, this = DecorView@fa9ea8[MainActivity]
+10-29 20:13:13.652 12921 12921 I flutter : DCHECKINIITinitState initState calls INIT_STATE
+10-29 20:13:13.719 12921 12947 D Surface : Surface::connect(this=0x740908a000,api=1)
+10-29 20:13:13.721 12921 12941 D Surface : Surface::connect(this=0x74723aa000,api=1)
+10-29 20:13:13.724 12921 12947 W Gralloc3: mapper 3.x is not supported
+10-29 20:13:13.727 12921 12947 E ion     : ioctl c0044901 failed with code -1: Invalid argument
+10-29 20:13:13.728 12921 12941 D Surface : Surface::setBufferCount(this=0x74723aa000,bufferCount=3)
+10-29 20:13:17.300 12921 12921 D ViewRootImpl: setSurfaceViewCreated, created:true
+10-29 20:13:17.303 12921 12947 D Surface : Surface::disconnect(this=0x740908a000,api=1)
+10-29 20:13:17.304 12921 12947 D Surface : Surface::connect(this=0x740908a000,api=1)
+10-29 20:13:17.335 12921 12921 I System.out: File '/storage/emulated/0/Download/Alta.zip' does not exist.
+10-29 20:13:17.339 12921 12921 I System.out: File '/storage/emulated/0/Download/Apollo.zip' does not exist.
+10-29 20:13:17.339 12921 12921 I flutter : Received message FILE AVAILABLE ALTA : false
+10-29 20:13:17.340 12921 12921 I flutter : Received message FILE AVAILABLE APOLLO : false
+10-29 20:13:17.353 12921 12921 I Choreographer: Skipped 218 frames!  The application may be doing too much work on its main thread.
+10-29 20:13:17.387 12921 12941 I OpenGLRenderer: Davey! duration=3678ms; Flags=1, IntendedVsync=925875973781, Vsync=929509307187, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=929523560131, AnimationStart=929523595669, PerformTraversalsStart=929523597746, DrawStart=929530264900, SyncQueued=929530875592, SyncStart=929532949515, IssueDrawCommandsStart=929533618361, SwapBuffers=929555523131, FrameCompleted=929557017438, DequeueBufferDuration=0, QueueBufferDuration=675000, 
+10-29 20:13:17.409 12921 12921 V PhoneWindow: DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@66476cb, this = DecorView@fa9ea8[MainActivity]
+10-29 20:13:19.166 12921 12990 D ProfileInstaller: Installing profile for com.example.mobilesoftwareg
+10-29 20:13:53.698 12921 12948 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:13:53.703 12921 12947 D Surface : Surface::disconnect(this=0x740908a000,api=1)
+10-29 20:13:53.707 12921 12921 D ViewRootImpl: setSurfaceViewCreated, created:false
+10-29 20:13:53.707 12921 12921 D Surface : Surface::disconnect(this=0x740908a000,api=-1)
+10-29 20:13:53.713 12921 12941 D Surface : Surface::disconnect(this=0x74723aa000,api=1)
+10-29 20:13:53.732 12921 12921 V PhoneWindow: DecorView setVisiblity: visibility = 4, Parent = android.view.ViewRootImpl@66476cb, this = DecorView@fa9ea8[MainActivity]
+10-29 20:13:54.702 12921 12948 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:13:54.702 12921 12948 I chatty  : uid=10226(com.example.mobilesoftwareg) 1.io identical 1 line
+10-29 20:13:54.702 12921 12948 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:13:54.768 12921 12921 W FlutterJNI: Tried to send a platform message to Flutter, but FlutterJNI was detached from native C++. Could not send. Channel: /connectNativeLevel. Response ID: 13
+10-29 20:13:54.775 12921 12921 D View    : [Warning] assignParent to null: this = DecorView@fa9ea8[MainActivity]
+10-29 20:13:54.789 12921 12921 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+10-29 20:13:54.789 12921 12921 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+10-29 20:13:54.789 12921 12921 D MediaPlayer: _release native called
+10-29 20:13:54.852 12921 12921 D MediaPlayer: _release native finished
+10-29 20:13:54.858 12921 12921 W MediaPlayer: mediaplayer went away with unhandled events
+10-29 20:13:54.879 12921 12941 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:13:56.957 12921 12921 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@ef3b45a
+10-29 20:13:57.002 12921 13023 I flutter : [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+10-29 20:13:57.030 12921 12921 V PhoneWindow: DecorView setVisiblity: visibility = 4, Parent = null, this = DecorView@61129fe[]
+10-29 20:13:57.032 12921 12921 D ViewRootImpl[MainActivity]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+10-29 20:13:57.036 12921 12921 V PhoneWindow: DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@d036075, this = DecorView@61129fe[MainActivity]
+10-29 20:13:57.044 12921 12921 I flutter : DCHECKINIITinitState initState calls INIT_STATE
+10-29 20:13:57.072 12921 12921 I System.out: File '/storage/emulated/0/Download/Alta.zip' does not exist.
+10-29 20:13:57.075 12921 12921 I System.out: File '/storage/emulated/0/Download/Apollo.zip' does not exist.
+10-29 20:13:57.076 12921 12921 I flutter : Received message FILE AVAILABLE ALTA : false
+10-29 20:13:57.076 12921 12921 I flutter : Received message FILE AVAILABLE APOLLO : false
+10-29 20:13:57.087 12921 12941 D Surface : Surface::connect(this=0x746ee13000,api=1)
+10-29 20:13:57.089 12921 12941 D Surface : Surface::setBufferCount(this=0x746ee13000,bufferCount=3)
+10-29 20:13:57.097 12921 13023 D Surface : Surface::connect(this=0x74090d0000,api=1)
+10-29 20:13:57.162 12921 12921 D ViewRootImpl: setSurfaceViewCreated, created:true
+10-29 20:13:57.164 12921 13023 D Surface : Surface::disconnect(this=0x74090d0000,api=1)
+10-29 20:13:57.165 12921 13023 D Surface : Surface::connect(this=0x74090d0000,api=1)
+10-29 20:14:02.238 12921 13030 D APPDownloadDETAILS START TIME -> : 2025-10-29T20:14:02.238
+10-29 20:14:02.240 12921 13030 D FILE EXIST -> : File not exist
+10-29 20:14:02.243 12921 13030 D         : https://mobilesoftwareupdate.blob.core.windows.net/temppackages/alta3.0.3.zip?sp=r&st=2025-10-14T13:21:23Z&se=2026-10-14T21:36:23Z&spr=https&sv=2024-11-04&sr=b&sig=aqU6wQbgVzQqSMI3cx%2BK7klhwmSNYurjjV9JR6lpSbo%3D
+10-29 20:14:02.243 12921 13030 D         : /storage/emulated/0/Download/Alta.zip
+10-29 20:14:02.243 12921 13030 D         : [G{Active}@af83674]
+10-29 20:14:02.261 12921 13032 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+--------- beginning of crash
+10-29 20:14:02.344 12921 13030 E AndroidRuntime: FATAL EXCEPTION: DefaultDispatcher-worker-1
+10-29 20:14:02.344 12921 13030 E AndroidRuntime: Process: com.example.mobilesoftwareg, PID: 12921
+10-29 20:14:02.407 12921 13030 I Process : Sending signal. PID: 12921 SIG: 9
+-----------------------------------------------------------------------------------------------------------------------------------------
+--------- beginning of system
+10-29 20:13:13.531 12921 12921 D AppResolutionTuner: loadTunerAppList + 
+10-29 20:13:13.534 12921 12921 D AppResolutionTuner: loadTunerAppList - 
+--------- beginning of crash
+10-29 20:14:02.344 12921 13030 E AndroidRuntime: FATAL EXCEPTION: DefaultDispatcher-worker-1
+10-29 20:14:02.344 12921 13030 E AndroidRuntime: Process: com.example.mobilesoftwareg, PID: 12921
+------------------------------------------------------------------------------------------------------------------------------------------
+--------- beginning of main
+10-29 20:17:17.738 14891 14891 E mobilesoftware: Not starting debugger since process cannot load the jdwp agent.
+10-29 20:17:17.834 14891 14908 D Typeface: Invalid or same font: 
+10-29 20:17:19.043 14891 14891 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@30f6c60
+10-29 20:17:19.157 14891 14891 W mobilesoftwareg: type=1400 audit(0.0:820): avc: denied { read } for name="max_map_count" dev="proc" ino=176359 scontext=u:r:untrusted_app:s0:c226,c256,c512,c768 tcontext=u:object_r:proc_max_map_count:s0 tclass=file permissive=0
+10-29 20:17:19.170 14891 14929 I GPUD    : @gpudInitialize: successfully initialized with GL, dbg=0 mmdump_dbg=0 mmpath_dbg=0
+10-29 20:17:19.234 14891 14929 I flutter : [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+10-29 20:17:19.414 14891 14891 I SurfaceFactory: [static] sSurfaceFactory = com.mediatek.view.impl.SurfaceFactoryImpl@43cce51
+--------- beginning of system
+10-29 20:17:19.416 14891 14891 D AppResolutionTuner: loadTunerAppList + 
+10-29 20:17:19.424 14891 14891 D AppResolutionTuner: loadTunerAppList - 
+10-29 20:17:19.425 14891 14891 D SurfaceExt: initResolutionTunner, mPackageName:com.example.mobilesoftwareg,mContainPackageName:falsemXScaleValue:1.0,mYScaleValue:1.0
+10-29 20:17:19.471 14891 14891 D ViewRootImpl[MainActivity]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+10-29 20:17:19.478 14891 14891 V PhoneWindow: DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@cc1b4a7, this = DecorView@3aefd54[MainActivity]
+10-29 20:17:19.490 14891 14891 I flutter : DCHECKINIITinitState initState calls INIT_STATE
+10-29 20:17:19.515 14891 14891 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+10-29 20:17:19.515 14891 14891 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+10-29 20:17:19.515 14891 14891 D MediaPlayer: _release native called
+10-29 20:17:19.569 14891 14891 D MediaPlayer: _release native finished
+10-29 20:17:19.639 14891 14929 D Surface : Surface::connect(this=0x746f100000,api=1)
+10-29 20:17:19.639 14891 14924 D Surface : Surface::connect(this=0x74723aa000,api=1)
+10-29 20:17:19.641 14891 14924 D Surface : Surface::setBufferCount(this=0x74723aa000,bufferCount=3)
+10-29 20:17:19.643 14891 14929 W Gralloc3: mapper 3.x is not supported
+10-29 20:17:19.647 14891 14929 E ion     : ioctl c0044901 failed with code -1: Invalid argument
+10-29 20:17:19.718 14891 14891 D ViewRootImpl: setSurfaceViewCreated, created:true
+10-29 20:17:19.720 14891 14929 D Surface : Surface::disconnect(this=0x746f100000,api=1)
+10-29 20:17:19.721 14891 14929 D Surface : Surface::connect(this=0x746f100000,api=1)
+10-29 20:17:19.732 14891 14891 I System.out: File '/storage/emulated/0/Download/Alta.zip' does not exist.
+10-29 20:17:19.736 14891 14891 I System.out: File '/storage/emulated/0/Download/Apollo.zip' does not exist.
+10-29 20:17:19.736 14891 14891 I flutter : Received message FILE AVAILABLE ALTA : false
+10-29 20:17:19.737 14891 14891 I flutter : Received message FILE AVAILABLE APOLLO : false
+10-29 20:17:19.753 14891 14891 W MediaPlayer: mediaplayer went away with unhandled events
+10-29 20:17:19.753 14891 14891 W MediaPlayer: mediaplayer went away with unhandled events
+10-29 20:17:20.699 14891 14939 D APPDownloadDETAILS START TIME -> : 2025-10-29T20:17:20.698
+10-29 20:17:20.700 14891 14939 D FILE EXIST -> : File not exist
+10-29 20:17:20.703 14891 14939 D         : https://mobilesoftwareupdate.blob.core.windows.net/temppackages/HS1gb.zip?sp=r&st=2025-10-14T13:20:39Z&se=2026-10-14T21:35:39Z&spr=https&sv=2024-11-04&sr=b&sig=Nlv0kLT9weiWNkJcZ9uU6IhhkVqlVDN3pAjgkUaZ09M%3D
+10-29 20:17:20.703 14891 14939 D         : /storage/emulated/0/Download/Apollo.zip
+10-29 20:17:20.704 14891 14939 D         : [G{Active}@411b411]
+10-29 20:17:20.718 14891 14941 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+10-29 20:17:20.775 14891 14943 I System.out: [socket]:check permission begin!
+10-29 20:17:20.775 14891 14943 W System  : ClassLoader referenced unknown path: system/framework/mediatek-cta.jar
+10-29 20:17:20.778 14891 14943 I System.out: [socket] e:java.lang.ClassNotFoundException: com.mediatek.cta.CtaUtils
+--------- beginning of crash
+10-29 20:17:22.456 14891 14939 E AndroidRuntime: FATAL EXCEPTION: DefaultDispatcher-worker-1
+10-29 20:17:22.456 14891 14939 E AndroidRuntime: Process: com.example.mobilesoftwareg, PID: 14891
+10-29 20:17:22.456 14891 14939 E AndroidRuntime: java.io.FileNotFoundException: /storage/emulated/0/Download/Apollo.zip: open failed: EACCES (Permission denied)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at libcore.io.IoBridge.open(IoBridge.java:496)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at java.io.RandomAccessFile.<init>(RandomAccessFile.java:289)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at C.h.c(SourceFile:99)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at O0.a.p(SourceFile:9)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at l2.J.run(SourceFile:119)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at l2.U.M(SourceFile:142)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at l2.C.q(SourceFile:87)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at C.l.c(SourceFile:15)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at O0.a.p(SourceFile:9)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at l2.J.run(SourceFile:119)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at q2.i.run(SourceFile:4)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at s2.i.run(SourceFile:3)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at s2.a.run(SourceFile:91)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        Suppressed: q2.g: [s0{Cancelling}@680f0f8, Dispatchers.IO]
+10-29 20:17:22.456 14891 14939 E AndroidRuntime: Caused by: android.system.ErrnoException: open failed: EACCES (Permission denied)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at libcore.io.Linux.open(Native Method)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:7300)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        at libcore.io.IoBridge.open(IoBridge.java:482)
+10-29 20:17:22.456 14891 14939 E AndroidRuntime:        ... 12 more
+10-29 20:17:22.664 14891 14930 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:17:22.668 14891 14929 D Surface : Surface::disconnect(this=0x746f100000,api=1)
+10-29 20:17:22.670 14891 14891 D ViewRootImpl: setSurfaceViewCreated, created:false
+10-29 20:17:22.671 14891 14891 D Surface : Surface::disconnect(this=0x746f100000,api=-1)
+10-29 20:17:22.680 14891 14891 V PhoneWindow: DecorView setVisiblity: visibility = 4, Parent = android.view.ViewRootImpl@cc1b4a7, this = DecorView@3aefd54[MainActivity]
+10-29 20:17:22.688 14891 14930 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:17:22.689 14891 14930 I chatty  : uid=10226(com.example.mobilesoftwareg) identical 1 line
+10-29 20:17:22.689 14891 14930 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:17:22.727 14891 14891 W FlutterJNI: Tried to send a platform message to Flutter, but FlutterJNI was detached from native C++. Could not send. Channel: /connectNativeLevel. Response ID: 12
+10-29 20:17:22.732 14891 14924 D Surface : Surface::disconnect(this=0x74723aa000,api=1)
+10-29 20:17:22.734 14891 14891 D View    : [Warning] assignParent to null: this = DecorView@3aefd54[MainActivity]
+10-29 20:17:22.747 14891 14891 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+10-29 20:17:22.747 14891 14891 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+10-29 20:17:22.747 14891 14891 D MediaPlayer: _release native called
+10-29 20:17:22.787 14891 14891 D MediaPlayer: _release native finished
+10-29 20:17:22.797 14891 14891 W MediaPlayer: mediaplayer went away with unhandled events
+10-29 20:17:22.806 14891 14924 I GED     : ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+10-29 20:17:23.819 14891 14964 D ProfileInstaller: Skipping profile installation for com.example.mobilesoftwareg
+10-29 20:17:27.809 14891 14905 D MediaPlayer: finalize() native_finalize called
+10-29 20:17:27.809 14891 14905 D MediaPlayer: finalize() native_finalize finished
+10-29 20:17:27.810 14891 14905 D MediaPlayer: finalize() native_finalize called
+10-29 20:17:27.810 14891 14905 D MediaPlayer: finalize() native_finalize finished
+------------------------------------------------------------------------------------------------------
+--------- beginning of main
+11-03 12:58:11.181 E/Zygote  (25055): process_name_ptr:25055 com.example.mobilesoftwareg
+11-03 12:58:11.199 I/mobilesoftwareg(25055): Using CollectorTypeCC GC.
+11-03 12:58:11.205 E/mobilesoftwareg(25055): Not starting debugger since process cannot load the jdwp agent.
+11-03 12:58:11.210 D/nativeloader(25055): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-03 12:58:11.216 W/System.err(25055): android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+11-03 12:58:11.217 W/System.err(25055):         at libcore.io.Linux.open(Native Method)
+11-03 12:58:11.217 W/System.err(25055):         at libcore.io.ForwardingOs.open(ForwardingOs.java:568)
+11-03 12:58:11.217 W/System.err(25055):         at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+11-03 12:58:11.217 W/System.err(25055):         at libcore.io.ForwardingOs.open(ForwardingOs.java:568)
+11-03 12:58:11.217 W/System.err(25055):         at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8381)
+11-03 12:58:11.217 W/System.err(25055):         at android.system.Os.open(Os.java:500)
+11-03 12:58:11.217 W/System.err(25055):         at android.os.perfdebug.PerfDebugMonitorImpl.monitorVersionControl(PerfDebugMonitorImpl.java:206)
+11-03 12:58:11.217 W/System.err(25055):         at android.os.perfdebug.PerfDebugMonitorImpl.prepareMonitor(PerfDebugMonitorImpl.java:187)
+11-03 12:58:11.217 W/System.err(25055):         at android.app.ActivityThread.main(ActivityThread.java:8468)
+11-03 12:58:11.217 W/System.err(25055):         at java.lang.reflect.Method.invoke(Native Method)
+11-03 12:58:11.217 W/System.err(25055):         at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:561)
+11-03 12:58:11.217 W/System.err(25055):         at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:954)
+11-03 12:58:11.218 I/MessageMonitor(25055): Load libmiui_runtime
+11-03 12:58:11.255 D/CompatibilityChangeReporter(25055): Compat change id reported: 171979766; UID 10292; state: ENABLED
+11-03 12:58:11.277 D/nativeloader(25055): Configuring clns-4 for other apk /data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/lib/arm64:/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.mobilesoftwareg
+11-03 12:58:11.292 D/nativeloader(25055): Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
+11-03 12:58:11.293 I/Perf    (25055): Connecting to perf service.
+11-03 12:58:11.299 V/GraphicsEnvironment(25055): ANGLE Developer option for 'com.example.mobilesoftwareg' set to: 'default'
+11-03 12:58:11.301 V/GraphicsEnvironment(25055): ANGLE GameManagerService for com.example.mobilesoftwareg: false
+11-03 12:58:11.301 V/GraphicsEnvironment(25055): App is not on the allowlist for updatable production driver.
+11-03 12:58:11.306 I/ForceDarkHelperStubImpl(25055): initialize for com.example.mobilesoftwareg , ForceDarkOrigin
+11-03 12:58:11.307 D/nativeloader(25055): Load libforcedarkimpl.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+11-03 12:58:11.307 D/mobilesoftwareg(25055): JNI_OnLoad success
+11-03 12:58:11.307 I/MiuiForceDarkConfig(25055): setConfig density:2.156250, mainRule:0, secondaryRule:0, tertiaryRule:0
+11-03 12:58:11.308 D/NetworkSecurityConfig(25055): No Network Security Config specified, using platform default
+11-03 12:58:11.308 D/NetworkSecurityConfig(25055): No Network Security Config specified, using platform default
+11-03 12:58:11.342 W/libc    (25055): Access denied finding property "ro.vendor.df.effect.conflict"
+11-03 12:58:11.347 D/nativeloader(25055): Load /data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk!/lib/arm64-v8a/libflutter.so using class loader ns clns-4 (caller=/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk): ok
+11-03 12:58:11.407 D/vulkan  (25055): searching for layers in '/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/lib/arm64'
+11-03 12:58:11.408 D/vulkan  (25055): searching for layers in '/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk!/lib/arm64-v8a'
+11-03 12:58:11.422 I/AdrenoVK-0(25055): ===== BEGIN DUMP OF OVERRIDDEN SETTINGS =====
+11-03 12:58:11.422 I/AdrenoVK-0(25055): ===== END DUMP OF OVERRIDDEN SETTINGS =====
+11-03 12:58:11.423 I/AdrenoVK-0(25055): QUALCOMM build          : 3e33337ce3, I07ee46fc66
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Build Date              : 10/08/21
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Shader Compiler Version : EV031.35.01.10
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Local Branch            : 
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Remote Branch           : 
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Remote Branch           : 
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Reconstruct Branch      : 
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Build Config            : S P 10.0.7 AArch64
+11-03 12:58:11.423 I/AdrenoVK-0(25055): Driver Path             : /vendor/lib64/hw/vulkan.adreno.so
+11-03 12:58:11.427 I/flutter (25055): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(62)] Using the Impeller rendering backend (Vulkan).
+11-03 12:58:11.557 D/IS_CTS_MODE(25055): false
+11-03 12:58:11.557 D/MULTI_WINDOW_ENABLED(25055): false
+11-03 12:58:11.559 D/DecorView[](25055): getWindowModeFromSystem  windowmode is 1
+11-03 12:58:11.596 W/Activity(25055): Can request only one set of permissions at a time
+11-03 12:58:11.630 D/DecorView[](25055): getWindowModeFromSystem  windowmode is 1
+11-03 12:58:11.630 D/DecorView[](25055): updateDecorCaptionStatus windowMode is 1
+--------- beginning of system
+11-03 12:58:11.645 W/Looper  (25055): PerfMonitor looperActivity : package=com.example.mobilesoftwareg/.MainActivity time=0ms latency=396ms  procState=-1  historyMsgCount=3
+11-03 12:58:11.646 I/flutter (25055): DCHECKINIITinitState initState calls INIT_STATE
+11-03 12:58:11.657 D/FramePredict(25055): FramePredict init: false
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): QUALCOMM build                   : 3e33337ce3, I07ee46fc66
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): Build Date                       : 10/08/21
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): OpenGL ES Shader Compiler Version: EV031.35.01.10
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): Local Branch                     : 
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): Remote Branch                    : 
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): Remote Branch                    : 
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): Reconstruct Branch               : 
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): Build Config                     : S P 10.0.7 AArch64
+11-03 12:58:11.692 I/AdrenoGLES-0(25055): Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+11-03 12:58:11.696 I/AdrenoGLES-0(25055): PFP: 0x016ee201, ME: 0x00000000
+11-03 12:58:11.705 D/VRI[MainActivity](25055): vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4013 android.view.ViewRootImpl.doTraversal:2725 android.view.ViewRootImpl$TraversalRunnable.run:9812 android.view.Choreographer$CallbackRecord.run:1505 android.view.Choreographer$CallbackRecord.run:1513 
+11-03 12:58:11.705 D/SurfaceView(25055): UPDATE null, mIsCastMode = false
+11-03 12:58:11.714 W/libc    (25055): Access denied finding property "vendor.migl.debug"
+11-03 12:58:11.724 E/libEGL  (25055): pre_cache appList: com.sina.weibo,com.ss.android.article.news,com.taobao.taobao,com.smile.gifmaker,com.ss.android.ugc.aweme,com.tencent.mm,tv.danmaku.bili,,
+11-03 12:58:11.728 E/qdgralloc(25055): GetGpuPixelFormat: No map for format: 0x38
+11-03 12:58:11.732 E/AdrenoUtils(25055): <validate_memory_layout_input_parmas:1970>: Unknown Format 0
+11-03 12:58:11.732 E/AdrenoUtils(25055): <adreno_init_memory_layout:4720>: Memory Layout input parameter validation failed!
+11-03 12:58:11.732 E/qdgralloc(25055): GetGpuResourceSizeAndDimensions Graphics metadata init failed
+11-03 12:58:11.732 E/Gralloc4(25055): isSupported(1, 1, 56, 1, ...) failed with 1
+11-03 12:58:11.741 E/GraphicBufferAllocator(25055): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 1
+11-03 12:58:11.741 E/AHardwareBuffer(25055): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -1), handle=0x0
+11-03 12:58:11.742 E/qdgralloc(25055): GetGpuPixelFormat: No map for format: 0x38
+11-03 12:58:11.742 E/AdrenoUtils(25055): <validate_memory_layout_input_parmas:1970>: Unknown Format 0
+11-03 12:58:11.743 E/AdrenoUtils(25055): <adreno_init_memory_layout:4720>: Memory Layout input parameter validation failed!
+11-03 12:58:11.743 E/qdgralloc(25055): GetGpuResourceSizeAndDimensions Graphics metadata init failed
+11-03 12:58:11.743 E/Gralloc4(25055): isSupported(1, 1, 56, 1, ...) failed with 1
+11-03 12:58:11.744 E/GraphicBufferAllocator(25055): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 1
+11-03 12:58:11.744 E/AHardwareBuffer(25055): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -1), handle=0x0
+11-03 12:58:11.750 E/libboost(25055): fail to open node: No such file or directory
+11-03 12:58:11.771 W/Looper  (25055): PerfMonitor doFrame : time=114ms vsyncFrame=0 latency=326ms procState=-1 historyMsgCount=3
+11-03 12:58:11.823 I/flutter (25055): Received message FILE AVAILABLE ALTA : false
+11-03 12:58:11.823 I/flutter (25055): Received message FILE AVAILABLE APOLLO : false
+11-03 12:58:11.828 D/DecorView[](25055): getWindowModeFromSystem  windowmode is 1
+11-03 12:58:11.829 D/DecorView[](25055): updateDecorCaptionStatus windowMode is 1
+11-03 12:58:11.837 D/VRI[MainActivity](25055): vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4013 android.view.ViewRootImpl.doTraversal:2725 android.view.ViewRootImpl$TraversalRunnable.run:9812 android.view.Choreographer$CallbackRecord.run:1505 android.view.Choreographer$CallbackRecord.run:1513 
+11-03 12:58:11.838 D/SurfaceView(25055): UPDATE Surface(name=SurfaceView[com.example.mobilesoftwareg/com.example.mobilesoftwareg.MainActivity])/@0xcf2e5de, mIsProjectionMode = false
+11-03 12:58:11.977 D/CompatibilityChangeReporter(25055): Compat change id reported: 160794467; UID 10292; state: ENABLED
+11-03 12:58:11.985 D/DecorView[](25055): getWindowModeFromSystem  windowmode is 1
+11-03 12:58:11.985 D/DecorView[](25055): updateDecorCaptionStatus windowMode is 1
+11-03 12:58:12.001 D/VRI[MainActivity](25055): vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4013 android.view.ViewRootImpl.doTraversal:2725 android.view.ViewRootImpl$TraversalRunnable.run:9812 android.view.Choreographer$CallbackRecord.run:1505 android.view.Choreographer$CallbackRecord.run:1513 
+11-03 12:58:12.200 D/VRI[MainActivity](25055): vri.Setup new sync id=0 syncSeqId=0
+11-03 12:58:12.255 D/mobilesoftwareg(25055): MiuiProcessManagerServiceStub setSchedFifo
+11-03 12:58:12.255 I/MiuiProcessManagerImpl(25055): setSchedFifo pid:25055, mode:3
+11-03 12:58:12.261 E/libEGL  (25055): pre_cache appList: com.sina.weibo,com.ss.android.article.news,com.taobao.taobao,com.smile.gifmaker,com.ss.android.ugc.aweme,com.tencent.mm,tv.danmaku.bili,,
+11-03 12:58:12.302 E/perf_hint(25055): Session creation failed, mPreferredRateNanos: -1
+11-03 12:58:12.303 D/VRI[MainActivity](25055): vri.reportDrawFinished syncSeqId=0 android.view.ViewRootImpl.lambda$createSyncIfNeeded$4$android-view-ViewRootImpl:4081 android.view.ViewRootImpl$$ExternalSyntheticLambda2.run:6 android.os.Handler.handleCallback:942 android.os.Handler.dispatchMessage:99 android.os.Looper.loopOnce:211 
+11-03 12:58:12.329 W/AidlConversion(25055): aidl2legacy_AudioChannelLayout_audio_channel_mask_t: no legacy output audio_channel_mask_t found for AudioChannelLayout{layoutMask: 16}
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 452984832
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 469762048
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 486539264
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 352321536
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 369098752
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 117440512
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316482
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316496
+11-03 12:58:12.330 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316736
+11-03 12:58:12.333 W/AidlConversion(25055): aidl2legacy_AudioChannelLayout_audio_channel_mask_t: no legacy output audio_channel_mask_t found for AudioChannelLayout{layoutMask: 16}
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 452984832
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 469762048
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 486539264
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 352321536
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 369098752
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 117440512
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316482
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316496
+11-03 12:58:12.333 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316736
+11-03 12:58:12.339 D/DecorView[](25055): onWindowFocusChanged hasWindowFocus true
+11-03 12:58:12.339 I/HandWritingStubImpl(25055): refreshLastKeyboardType: 1
+11-03 12:58:12.339 I/HandWritingStubImpl(25055): getCurrentKeyboardType: 1
+11-03 12:58:12.380 I/HandWritingStubImpl(25055): getCurrentKeyboardType: 1
+11-03 12:58:12.537 D/DecorView[](25055): onWindowFocusChanged hasWindowFocus false
+11-03 12:58:12.584 D/CompatibilityChangeReporter(25055): Compat change id reported: 78294732; UID 10292; state: ENABLED
+11-03 12:58:12.610 V/MediaPlayer(25055): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-03 12:58:12.611 V/MediaPlayer(25055): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-03 12:58:12.783 D/DecorView[](25055): onWindowFocusChanged hasWindowFocus true
+11-03 12:58:12.783 I/HandWritingStubImpl(25055): refreshLastKeyboardType: 1
+11-03 12:58:12.783 I/HandWritingStubImpl(25055): getCurrentKeyboardType: 1
+11-03 12:58:14.598 W/MirrorManager(25055): this model don't Support
+11-03 12:58:14.672 W/OnBackInvokedCallback(25055): OnBackInvokedCallback is not enabled for the application.
+11-03 12:58:14.672 W/OnBackInvokedCallback(25055): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-03 12:58:15.716 D/DecorView[](25055): onWindowFocusChanged hasWindowFocus false
+11-03 12:58:15.720 W/AidlConversion(25055): aidl2legacy_AudioChannelLayout_audio_channel_mask_t: no legacy output audio_channel_mask_t found for AudioChannelLayout{layoutMask: 16}
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 452984832
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 469762048
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 486539264
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 352321536
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 369098752
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 117440512
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316482
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316496
+11-03 12:58:15.720 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316736
+11-03 12:58:15.724 W/AidlConversion(25055): aidl2legacy_AudioChannelLayout_audio_channel_mask_t: no legacy output audio_channel_mask_t found for AudioChannelLayout{layoutMask: 16}
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 452984832
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 469762048
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 486539264
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 352321536
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 369098752
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 117440512
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316482
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316496
+11-03 12:58:15.725 W/AudioSystem-JNI(25055): Unknown native audio format for JAVA API: 503316736
+11-03 12:58:16.376 W/MiuiMagicPointerUtilsStubHeadImpl(25055): MiuiMagicPointerUtilsStubHeadImpl has been initialized !!
+11-03 12:58:17.545 D/ProfileInstaller(25055): Installing profile for com.example.mobilesoftwareg
+11-03 12:58:17.988 E/qdgralloc(25055): GetGpuPixelFormat: No map for format: 0x38
+11-03 12:58:17.988 E/AdrenoUtils(25055): <validate_memory_layout_input_parmas:1970>: Unknown Format 0
+11-03 12:58:17.988 E/AdrenoUtils(25055): <adreno_init_memory_layout:4720>: Memory Layout input parameter validation failed!
+11-03 12:58:17.988 E/qdgralloc(25055): GetGpuResourceSizeAndDimensions Graphics metadata init failed
+11-03 12:58:17.988 E/Gralloc4(25055): isSupported(1, 1, 56, 1, ...) failed with 1
+11-03 12:58:17.989 E/GraphicBufferAllocator(25055): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 1
+11-03 12:58:17.989 E/AHardwareBuffer(25055): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -1), handle=0x0
+11-03 12:58:17.989 E/qdgralloc(25055): GetGpuPixelFormat: No map for format: 0x38
+11-03 12:58:17.989 E/AdrenoUtils(25055): <validate_memory_layout_input_parmas:1970>: Unknown Format 0
+11-03 12:58:17.989 E/AdrenoUtils(25055): <adreno_init_memory_layout:4720>: Memory Layout input parameter validation failed!
+11-03 12:58:17.989 E/qdgralloc(25055): GetGpuResourceSizeAndDimensions Graphics metadata init failed
+11-03 12:58:17.989 E/Gralloc4(25055): isSupported(1, 1, 56, 1, ...) failed with 1
+11-03 12:58:17.990 E/GraphicBufferAllocator(25055): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 1
+11-03 12:58:17.990 E/AHardwareBuffer(25055): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -1), handle=0x0
+11-03 12:58:18.035 D/VRI[MainActivity](25055): vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4013 android.view.ViewRootImpl.doTraversal:2725 android.view.ViewRootImpl$TraversalRunnable.run:9812 android.view.Choreographer$CallbackRecord.run:1505 android.view.Choreographer$CallbackRecord.run:1513 
+11-03 12:58:18.035 D/SurfaceView(25055): UPDATE Surface(name=SurfaceView[com.example.mobilesoftwareg/com.example.mobilesoftwareg.MainActivity])/@0xf3cd4bb, mIsProjectionMode = false
+11-03 12:58:18.037 D/VRI[MainActivity](25055): vri.Setup new sync id=1 syncSeqId=0
+11-03 12:58:18.044 V/MediaPlayer(25055): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-03 12:58:18.044 V/MediaPlayer(25055): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-03 12:58:18.209 W/MediaPlayer(25055): mediaplayer went away with unhandled events
+11-03 12:58:18.239 D/VRI[MainActivity](25055): vri.reportDrawFinished syncSeqId=0 android.view.ViewRootImpl.lambda$createSyncIfNeeded$4$android-view-ViewRootImpl:4081 android.view.ViewRootImpl$$ExternalSyntheticLambda2.run:6 android.os.Handler.handleCallback:942 android.os.Handler.dispatchMessage:99 android.os.Looper.loopOnce:211 
+11-03 12:58:18.269 D/DecorView[](25055): onWindowFocusChanged hasWindowFocus true
+11-03 12:58:18.269 I/HandWritingStubImpl(25055): refreshLastKeyboardType: 1
+11-03 12:58:18.269 I/HandWritingStubImpl(25055): getCurrentKeyboardType: 1
+11-03 12:58:53.890 D/ipAddress (25055): 192.168.1.4
+11-03 12:58:53.891 D/ipAddress ipAddress (25055): 192.168.1.4
+11-03 12:58:53.891 I/flutter (25055): serverData -> server started : http://192.168.1.4:8080 port
+11-03 12:58:53.896 W/System.err(25055): SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+11-03 12:58:53.896 W/System.err(25055): SLF4J: Defaulting to no-operation (NOP) logger implementation
+11-03 12:58:53.896 W/System.err(25055): SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+11-03 12:58:53.906 D/APPDownloadDETAILS Server start at -> (25055): http://192.168.1.4:8080 port
+11-03 12:58:53.909 D/MODULES -> (25055): /storage/emulated/0/Download/Apollo.zip
+11-03 12:59:00.944 D/APPDownloadDETAILS START TIME -> (25055): 2025-11-03T12:59:00.944226
+11-03 12:59:00.956 D/FILE EXIST -> (25055): File already exist
+11-03 12:59:04.917 D/APPDownloadDETAILS START TIME -> (25055): 2025-11-03T12:59:04.917799
+11-03 12:59:04.919 D/FILE EXIST -> (25055): File not exist
+11-03 12:59:04.920 D/        (25055): https://mobilesoftwareupdate.blob.core.windows.net/temppackages/HS1gb.zip?sp=r&st=2025-10-14T13:20:39Z&se=2026-10-14T21:35:39Z&spr=https&sv=2024-11-04&sr=b&sig=Nlv0kLT9weiWNkJcZ9uU6IhhkVqlVDN3pAjgkUaZ09M%3D
+11-03 12:59:04.920 D/        (25055): /storage/emulated/0/Download/Apollo.zip
+11-03 12:59:04.921 D/        (25055): [G{Active}@14862ab]
+11-03 12:59:06.822 D/BEFOREPROGRESSSS PROGRESS % -> (25055): 0.0%
+11-03 12:59:07.153 W/System  (25055): A resource failed to call close. 
+11-03 12:59:07.158 D/DecorView[](25055): onWindowFocusChanged hasWindowFocus false
+11-03 12:59:08.039 D/DecorView[](25055): onWindowFocusChanged hasWindowFocus true
+11-03 12:59:08.039 I/HandWritingStubImpl(25055): refreshLastKeyboardType: 1
+11-03 12:59:08.039 I/HandWritingStubImpl(25055): getCurrentKeyboardType: 1
+11-03 12:59:12.810 D/APPDownloadDETAILS PROGRESS % -> (25055): 0.0%
+11-03 12:59:12.811 I/flutter (25055): Received message progressApolloData: Download Status 0.0%
+11-03 12:59:16.328 D/APPDownloadDETAILS PROGRESS % -> (25055): 1.0%
+11-03 12:59:16.329 I/flutter (25055): Received message progressApolloData: Download Status 1.0%
+11-03 12:59:17.112 D/APPDownloadDETAILS PROGRESS % -> (25055): 2.0%
+11-03 12:59:17.113 I/flutter (25055): Received message progressApolloData: Download Status 2.0%
+11-03 12:59:17.164 D/APPDownloadDETAILS PROGRESS % -> (25055): 3.0%
+11-03 12:59:17.165 I/flutter (25055): Received message progressApolloData: Download Status 3.0%
+11-03 12:59:17.204 D/APPDownloadDETAILS PROGRESS % -> (25055): 4.0%
+11-03 12:59:17.204 I/flutter (25055): Received message progressApolloData: Download Status 4.0%
+11-03 12:59:18.717 D/APPDownloadDETAILS PROGRESS % -> (25055): 5.0%
+11-03 12:59:18.718 I/flutter (25055): Received message progressApolloData: Download Status 5.0%
+11-03 12:59:21.090 D/APPDownloadDETAILS PROGRESS % -> (25055): 6.0%
+11-03 12:59:21.091 I/flutter (25055): Received message progressApolloData: Download Status 6.0%
+11-03 12:59:23.100 D/APPDownloadDETAILS PROGRESS % -> (25055): 7.0%
+11-03 12:59:23.101 I/flutter (25055): Received message progressApolloData: Download Status 7.0%
+11-03 12:59:23.782 D/APPDownloadDETAILS PROGRESS % -> (25055): 8.0%
+11-03 12:59:23.783 I/flutter (25055): Received message progressApolloData: Download Status 8.0%
+11-03 12:59:24.349 D/APPDownloadDETAILS PROGRESS % -> (25055): 9.0%
+11-03 12:59:24.350 I/flutter (25055): Received message progressApolloData: Download Status 9.0%
+11-03 12:59:24.418 D/APPDownloadDETAILS PROGRESS % -> (25055): 10.0%
+11-03 12:59:24.419 I/flutter (25055): Received message progressApolloData: Download Status 10.0%
+11-03 12:59:25.293 D/APPDownloadDETAILS PROGRESS % -> (25055): 10.0%
+11-03 12:59:25.293 I/flutter (25055): Received message progressApolloData: Download Status 10.0%
+11-03 12:59:25.931 D/APPDownloadDETAILS PROGRESS % -> (25055): 11.0%
+11-03 12:59:25.932 I/flutter (25055): Received message progressApolloData: Download Status 11.0%
+11-03 12:59:27.253 D/APPDownloadDETAILS PROGRESS % -> (25055): 12.0%
+11-03 12:59:27.254 I/flutter (25055): Received message progressApolloData: Download Status 12.0%
+11-03 12:59:28.121 D/APPDownloadDETAILS PROGRESS % -> (25055): 13.0%
+11-03 12:59:28.122 I/flutter (25055): Received message progressApolloData: Download Status 13.0%
+11-03 12:59:28.244 D/APPDownloadDETAILS PROGRESS % -> (25055): 14.0%
+11-03 12:59:28.245 I/flutter (25055): Received message progressApolloData: Download Status 14.0%
+11-03 12:59:29.767 D/APPDownloadDETAILS PROGRESS % -> (25055): 15.0%
+11-03 12:59:29.768 I/flutter (25055): Received message progressApolloData: Download Status 15.0%
+11-03 12:59:30.319 D/APPDownloadDETAILS PROGRESS % -> (25055): 16.0%
+11-03 12:59:30.319 I/flutter (25055): Received message progressApolloData: Download Status 16.0%
+11-03 12:59:33.419 D/APPDownloadDETAILS PROGRESS % -> (25055): 17.0%
+11-03 12:59:33.420 I/flutter (25055): Received message progressApolloData: Download Status 17.0%
+11-03 12:59:33.725 D/APPDownloadDETAILS PROGRESS % -> (25055): 18.0%
+11-03 12:59:33.725 I/flutter (25055): Received message progressApolloData: Download Status 18.0%
+11-03 12:59:34.866 D/APPDownloadDETAILS PROGRESS % -> (25055): 19.0%
+11-03 12:59:34.867 I/flutter (25055): Received message progressApolloData: Download Status 19.0%
+11-03 12:59:36.316 D/APPDownloadDETAILS PROGRESS % -> (25055): 20.0%
+11-03 12:59:36.317 I/flutter (25055): Received message progressApolloData: Download Status 20.0%
+11-03 12:59:36.646 D/APPDownloadDETAILS PROGRESS % -> (25055): 21.0%
+11-03 12:59:36.648 I/flutter (25055): Received message progressApolloData: Download Status 21.0%
+11-03 12:59:36.926 D/APPDownloadDETAILS PROGRESS % -> (25055): 21.0%
+11-03 12:59:36.926 I/flutter (25055): Received message progressApolloData: Download Status 21.0%
+11-03 12:59:37.513 D/APPDownloadDETAILS PROGRESS % -> (25055): 22.0%
+11-03 12:59:37.514 I/flutter (25055): Received message progressApolloData: Download Status 22.0%
+11-03 12:59:38.663 D/APPDownloadDETAILS PROGRESS % -> (25055): 23.0%
+11-03 12:59:38.664 I/flutter (25055): Received message progressApolloData: Download Status 23.0%
+11-03 12:59:38.809 D/APPDownloadDETAILS PROGRESS % -> (25055): 24.0%
+11-03 12:59:38.809 I/flutter (25055): Received message progressApolloData: Download Status 24.0%
+11-03 12:59:39.120 D/APPDownloadDETAILS PROGRESS % -> (25055): 25.0%
+11-03 12:59:39.121 I/flutter (25055): Received message progressApolloData: Download Status 25.0%
+11-03 12:59:39.713 D/APPDownloadDETAILS PROGRESS % -> (25055): 26.0%
+11-03 12:59:39.713 I/flutter (25055): Received message progressApolloData: Download Status 26.0%
+11-03 12:59:40.550 D/APPDownloadDETAILS PROGRESS % -> (25055): 27.0%
+11-03 12:59:40.550 I/flutter (25055): Received message progressApolloData: Download Status 27.0%
+11-03 12:59:42.233 D/APPDownloadDETAILS PROGRESS % -> (25055): 28.0%
+11-03 12:59:42.236 I/flutter (25055): Received message progressApolloData: Download Status 28.0%
+11-03 12:59:43.832 D/APPDownloadDETAILS PROGRESS % -> (25055): 29.0%
+11-03 12:59:43.833 I/flutter (25055): Received message progressApolloData: Download Status 29.0%
+11-03 12:59:44.582 D/APPDownloadDETAILS PROGRESS % -> (25055): 30.0%
+11-03 12:59:44.582 I/flutter (25055): Received message progressApolloData: Download Status 30.0%
+11-03 12:59:46.064 D/APPDownloadDETAILS PROGRESS % -> (25055): 31.0%
+11-03 12:59:46.064 I/flutter (25055): Received message progressApolloData: Download Status 31.0%
+11-03 12:59:46.077 I/mobilesoftwareg(25055): Background concurrent copying GC freed 9753KB AllocSpace bytes, 0(0B) LOS objects, 20% free, 90MB/114MB, paused 1.441ms,31us total 102.015ms
+11-03 12:59:46.186 D/APPDownloadDETAILS PROGRESS % -> (25055): 32.0%
+11-03 12:59:46.186 I/flutter (25055): Received message progressApolloData: Download Status 32.0%
+11-03 12:59:46.831 D/APPDownloadDETAILS PROGRESS % -> (25055): 32.0%
+11-03 12:59:46.832 I/flutter (25055): Received message progressApolloData: Download Status 32.0%
+11-03 12:59:47.748 D/APPDownloadDETAILS PROGRESS % -> (25055): 33.0%
+11-03 12:59:47.749 I/flutter (25055): Received message progressApolloData: Download Status 33.0%
+11-03 12:59:48.947 D/APPDownloadDETAILS PROGRESS % -> (25055): 34.0%
+11-03 12:59:48.948 I/flutter (25055): Received message progressApolloData: Download Status 34.0%
+11-03 12:59:49.089 D/APPDownloadDETAILS PROGRESS % -> (25055): 35.0%
+11-03 12:59:49.090 I/flutter (25055): Received message progressApolloData: Download Status 35.0%
+11-03 12:59:50.387 I/mobilesoftwareg(25055): Waiting for a blocking GC ProfileSaver
+11-03 12:59:50.408 D/APPDownloadDETAILS PROGRESS % -> (25055): 36.0%
+11-03 12:59:50.409 I/flutter (25055): Received message progressApolloData: Download Status 36.0%
+11-03 12:59:50.418 I/mobilesoftwareg(25055): WaitForGcToComplete blocked ProfileSaver on Background for 31.331ms
+11-03 12:59:50.440 D/APPDownloadDETAILS PROGRESS % -> (25055): 37.0%
+11-03 12:59:50.440 I/flutter (25055): Received message progressApolloData: Download Status 37.0%
+11-03 12:59:50.682 D/APPDownloadDETAILS PROGRESS % -> (25055): 38.0%
+11-03 12:59:50.683 I/flutter (25055): Received message progressApolloData: Download Status 38.0%
+11-03 12:59:52.535 I/mobilesoftwareg(25055): Background concurrent copying GC freed 20MB AllocSpace bytes, 1(10MB) LOS objects, 26% free, 66MB/90MB, paused 269us,28us total 104.344ms
+11-03 12:59:53.078 D/APPDownloadDETAILS PROGRESS % -> (25055): 39.0%
+11-03 12:59:53.079 I/flutter (25055): Received message progressApolloData: Download Status 39.0%
+11-03 12:59:53.750 D/APPDownloadDETAILS PROGRESS % -> (25055): 40.0%
+11-03 12:59:53.751 I/flutter (25055): Received message progressApolloData: Download Status 40.0%
+11-03 12:59:54.794 D/APPDownloadDETAILS PROGRESS % -> (25055): 41.0%
+11-03 12:59:54.795 I/flutter (25055): Received message progressApolloData: Download Status 41.0%
+11-03 12:59:55.363 D/APPDownloadDETAILS PROGRESS % -> (25055): 42.0%
+11-03 12:59:55.363 I/flutter (25055): Received message progressApolloData: Download Status 42.0%
+11-03 12:59:55.363 D/APPDownloadDETAILS PROGRESS % -> (25055): 43.0%
+11-03 12:59:55.364 I/flutter (25055): Received message progressApolloData: Download Status 43.0%
+11-03 12:59:55.655 D/APPDownloadDETAILS PROGRESS % -> (25055): 43.0%
+11-03 12:59:55.655 I/flutter (25055): Received message progressApolloData: Download Status 43.0%
+11-03 12:59:57.565 D/APPDownloadDETAILS PROGRESS % -> (25055): 44.0%
+11-03 12:59:57.566 I/flutter (25055): Received message progressApolloData: Download Status 44.0%
+11-03 12:59:57.901 D/APPDownloadDETAILS PROGRESS % -> (25055): 45.0%
+11-03 12:59:57.902 I/flutter (25055): Received message progressApolloData: Download Status 45.0%
+11-03 12:59:59.932 D/APPDownloadDETAILS PROGRESS % -> (25055): 46.0%
+11-03 12:59:59.932 I/flutter (25055): Received message progressApolloData: Download Status 46.0%
+11-03 13:00:00.944 D/APPDownloadDETAILS PROGRESS % -> (25055): 47.0%
+11-03 13:00:00.944 I/flutter (25055): Received message progressApolloData: Download Status 47.0%
+11-03 13:00:01.960 D/APPDownloadDETAILS PROGRESS % -> (25055): 48.0%
+11-03 13:00:01.961 I/flutter (25055): Received message progressApolloData: Download Status 48.0%
+11-03 13:00:02.547 D/APPDownloadDETAILS PROGRESS % -> (25055): 49.0%
+11-03 13:00:02.547 I/flutter (25055): Received message progressApolloData: Download Status 49.0%
+11-03 13:00:03.562 D/APPDownloadDETAILS PROGRESS % -> (25055): 50.0%
+11-03 13:00:03.563 I/flutter (25055): Received message progressApolloData: Download Status 50.0%
+11-03 13:00:03.958 D/APPDownloadDETAILS PROGRESS % -> (25055): 51.0%
+11-03 13:00:03.959 I/flutter (25055): Received message progressApolloData: Download Status 51.0%
+11-03 13:00:04.286 D/APPDownloadDETAILS PROGRESS % -> (25055): 52.0%
+11-03 13:00:04.287 I/flutter (25055): Received message progressApolloData: Download Status 52.0%
+11-03 13:00:06.706 D/APPDownloadDETAILS PROGRESS % -> (25055): 53.0%
+11-03 13:00:06.707 I/flutter (25055): Received message progressApolloData: Download Status 53.0%
+11-03 13:00:07.548 D/APPDownloadDETAILS PROGRESS % -> (25055): 54.0%
+11-03 13:00:07.549 I/flutter (25055): Received message progressApolloData: Download Status 54.0%
+11-03 13:00:09.374 D/APPDownloadDETAILS PROGRESS % -> (25055): 54.0%
+11-03 13:00:09.376 I/flutter (25055): Received message progressApolloData: Download Status 54.0%
+11-03 13:00:09.550 D/APPDownloadDETAILS PROGRESS % -> (25055): 55.0%
+11-03 13:00:09.551 I/flutter (25055): Received message progressApolloData: Download Status 55.0%
+11-03 13:00:09.752 D/APPDownloadDETAILS PROGRESS % -> (25055): 56.0%
+11-03 13:00:09.753 I/flutter (25055): Received message progressApolloData: Download Status 56.0%
+11-03 13:00:10.763 D/APPDownloadDETAILS PROGRESS % -> (25055): 57.0%
+11-03 13:00:10.764 I/flutter (25055): Received message progressApolloData: Download Status 57.0%
+11-03 13:00:10.946 D/APPDownloadDETAILS PROGRESS % -> (25055): 58.0%
+11-03 13:00:10.947 I/flutter (25055): Received message progressApolloData: Download Status 58.0%
+11-03 13:00:11.939 D/APPDownloadDETAILS PROGRESS % -> (25055): 59.0%
+11-03 13:00:11.940 I/flutter (25055): Received message progressApolloData: Download Status 59.0%
+11-03 13:00:12.025 D/APPDownloadDETAILS PROGRESS % -> (25055): 60.0%
+11-03 13:00:12.026 I/flutter (25055): Received message progressApolloData: Download Status 60.0%
+11-03 13:00:12.378 D/APPDownloadDETAILS PROGRESS % -> (25055): 61.0%
+11-03 13:00:12.379 I/flutter (25055): Received message progressApolloData: Download Status 61.0%
+11-03 13:00:13.531 D/APPDownloadDETAILS PROGRESS % -> (25055): 62.0%
+11-03 13:00:13.532 I/flutter (25055): Received message progressApolloData: Download Status 62.0%
+11-03 13:00:14.674 D/APPDownloadDETAILS PROGRESS % -> (25055): 63.0%
+11-03 13:00:14.675 I/flutter (25055): Received message progressApolloData: Download Status 63.0%
+11-03 13:00:15.334 D/APPDownloadDETAILS PROGRESS % -> (25055): 64.0%
+11-03 13:00:15.335 I/flutter (25055): Received message progressApolloData: Download Status 64.0%
+11-03 13:00:16.997 D/APPDownloadDETAILS PROGRESS % -> (25055): 64.0%
+11-03 13:00:16.998 I/flutter (25055): Received message progressApolloData: Download Status 64.0%
+11-03 13:00:17.998 D/APPDownloadDETAILS PROGRESS % -> (25055): 65.0%
+11-03 13:00:17.999 I/flutter (25055): Received message progressApolloData: Download Status 65.0%
+11-03 13:00:19.971 D/APPDownloadDETAILS PROGRESS % -> (25055): 66.0%
+11-03 13:00:19.973 I/flutter (25055): Received message progressApolloData: Download Status 66.0%
+11-03 13:00:20.378 D/APPDownloadDETAILS PROGRESS % -> (25055): 67.0%
+11-03 13:00:20.379 I/flutter (25055): Received message progressApolloData: Download Status 67.0%
+11-03 13:00:21.794 D/APPDownloadDETAILS PROGRESS % -> (25055): 68.0%
+11-03 13:00:21.794 I/flutter (25055): Received message progressApolloData: Download Status 68.0%
+11-03 13:00:22.396 D/APPDownloadDETAILS PROGRESS % -> (25055): 69.0%
+11-03 13:00:22.398 I/flutter (25055): Received message progressApolloData: Download Status 69.0%
+11-03 13:00:23.714 D/APPDownloadDETAILS PROGRESS % -> (25055): 70.0%
+11-03 13:00:23.715 I/flutter (25055): Received message progressApolloData: Download Status 70.0%
+11-03 13:00:23.727 D/APPDownloadDETAILS PROGRESS % -> (25055): 71.0%
+11-03 13:00:23.727 I/flutter (25055): Received message progressApolloData: Download Status 71.0%
+11-03 13:00:23.879 D/APPDownloadDETAILS PROGRESS % -> (25055): 72.0%
+11-03 13:00:23.879 I/flutter (25055): Received message progressApolloData: Download Status 72.0%
+11-03 13:00:24.019 D/APPDownloadDETAILS PROGRESS % -> (25055): 73.0%
+11-03 13:00:24.020 I/flutter (25055): Received message progressApolloData: Download Status 73.0%
+11-03 13:00:25.260 D/APPDownloadDETAILS PROGRESS % -> (25055): 74.0%
+11-03 13:00:25.262 I/flutter (25055): Received message progressApolloData: Download Status 74.0%
+11-03 13:00:25.832 D/APPDownloadDETAILS PROGRESS % -> (25055): 75.0%
+11-03 13:00:25.833 I/flutter (25055): Received message progressApolloData: Download Status 75.0%
+11-03 13:00:28.046 D/APPDownloadDETAILS PROGRESS % -> (25055): 75.0%
+11-03 13:00:28.047 I/flutter (25055): Received message progressApolloData: Download Status 75.0%
+11-03 13:00:28.234 D/APPDownloadDETAILS PROGRESS % -> (25055): 76.0%
+11-03 13:00:28.234 I/flutter (25055): Received message progressApolloData: Download Status 76.0%
+11-03 13:00:29.989 D/APPDownloadDETAILS PROGRESS % -> (25055): 77.0%
+11-03 13:00:29.990 I/flutter (25055): Received message progressApolloData: Download Status 77.0%
+11-03 13:00:31.072 D/APPDownloadDETAILS PROGRESS % -> (25055): 78.0%
+11-03 13:00:31.073 I/flutter (25055): Received message progressApolloData: Download Status 78.0%
+11-03 13:00:31.472 D/APPDownloadDETAILS PROGRESS % -> (25055): 79.0%
+11-03 13:00:31.474 I/flutter (25055): Received message progressApolloData: Download Status 79.0%
+11-03 13:00:31.956 D/APPDownloadDETAILS PROGRESS % -> (25055): 80.0%
+11-03 13:00:31.957 I/flutter (25055): Received message progressApolloData: Download Status 80.0%
+11-03 13:00:32.103 D/APPDownloadDETAILS PROGRESS % -> (25055): 81.0%
+11-03 13:00:32.104 I/flutter (25055): Received message progressApolloData: Download Status 81.0%
+11-03 13:00:32.590 D/APPDownloadDETAILS PROGRESS % -> (25055): 82.0%
+11-03 13:00:32.590 I/flutter (25055): Received message progressApolloData: Download Status 82.0%
+11-03 13:00:33.961 D/APPDownloadDETAILS PROGRESS % -> (25055): 83.0%
+11-03 13:00:33.962 I/flutter (25055): Received message progressApolloData: Download Status 83.0%
+11-03 13:00:34.216 D/APPDownloadDETAILS PROGRESS % -> (25055): 84.0%
+11-03 13:00:34.217 I/flutter (25055): Received message progressApolloData: Download Status 84.0%
+11-03 13:00:36.103 D/APPDownloadDETAILS PROGRESS % -> (25055): 85.0%
+11-03 13:00:36.104 I/flutter (25055): Received message progressApolloData: Download Status 85.0%
+11-03 13:00:37.017 D/APPDownloadDETAILS PROGRESS % -> (25055): 86.0%
+11-03 13:00:37.018 I/flutter (25055): Received message progressApolloData: Download Status 86.0%
+11-03 13:00:38.351 D/APPDownloadDETAILS PROGRESS % -> (25055): 86.0%
+11-03 13:00:38.351 I/flutter (25055): Received message progressApolloData: Download Status 86.0%
+11-03 13:00:39.656 D/APPDownloadDETAILS PROGRESS % -> (25055): 87.0%
+11-03 13:00:39.657 I/flutter (25055): Received message progressApolloData: Download Status 87.0%
+11-03 13:00:40.930 D/APPDownloadDETAILS PROGRESS % -> (25055): 88.0%
+11-03 13:00:40.930 I/flutter (25055): Received message progressApolloData: Download Status 88.0%
+11-03 13:00:41.273 D/APPDownloadDETAILS PROGRESS % -> (25055): 89.0%
+11-03 13:00:41.274 I/flutter (25055): Received message progressApolloData: Download Status 89.0%
+11-03 13:00:41.284 D/APPDownloadDETAILS PROGRESS % -> (25055): 90.0%
+11-03 13:00:41.284 I/flutter (25055): Received message progressApolloData: Download Status 90.0%
+11-03 13:00:41.511 D/APPDownloadDETAILS PROGRESS % -> (25055): 91.0%
+11-03 13:00:41.511 I/flutter (25055): Received message progressApolloData: Download Status 91.0%
+11-03 13:00:42.351 D/APPDownloadDETAILS PROGRESS % -> (25055): 92.0%
+11-03 13:00:42.352 I/flutter (25055): Received message progressApolloData: Download Status 92.0%
+11-03 13:00:43.267 D/APPDownloadDETAILS PROGRESS % -> (25055): 93.0%
+11-03 13:00:43.268 I/flutter (25055): Received message progressApolloData: Download Status 93.0%
+11-03 13:00:43.530 D/APPDownloadDETAILS PROGRESS % -> (25055): 93.0%
+11-03 13:00:43.531 I/flutter (25055): Received message progressApolloData: Download Status 93.0%
+11-03 13:00:45.557 D/APPDownloadDETAILS PROGRESS % -> (25055): 94.0%
+11-03 13:00:45.558 I/flutter (25055): Received message progressApolloData: Download Status 94.0%
+11-03 13:00:45.752 D/APPDownloadDETAILS PROGRESS % -> (25055): 95.0%
+11-03 13:00:45.753 I/flutter (25055): Received message progressApolloData: Download Status 95.0%
+11-03 13:00:47.593 D/APPDownloadDETAILS PROGRESS % -> (25055): 96.0%
+11-03 13:00:47.595 I/flutter (25055): Received message progressApolloData: Download Status 96.0%
+11-03 13:00:49.049 D/APPDownloadDETAILS PROGRESS % -> (25055): 97.0%
+11-03 13:00:49.050 I/flutter (25055): Received message progressApolloData: Download Status 97.0%
+11-03 13:00:51.386 D/APPDownloadDETAILS PROGRESS % -> (25055): 98.0%
+11-03 13:00:51.387 I/flutter (25055): Received message progressApolloData: Download Status 98.0%
+11-03 13:00:52.649 D/APPDownloadDETAILS PROGRESS % -> (25055): 99.0%
+11-03 13:00:52.650 I/flutter (25055): Received message progressApolloData: Download Status 99.0%
+11-03 13:01:02.233 D/APPDownloadDETAILS PROGRESS % -> (25055): 100.0%
+11-03 13:01:02.235 I/flutter (25055): Received message progressApolloData: Download Status 100.0%
+11-03 13:01:02.236 I/System.out(25055): APPDownloadDETAILS Download completed file path -> : /storage/emulated/0/Download/Apollo.zip
+11-03 13:01:02.236 I/System.out(25055): APPDownloadDETAILS Finished in 117.315 seconds
+11-03 13:01:02.236 D/APPDownloadDETAILS  END TIME -> (25055): 2025-11-03T13:01:02.236457
+11-03 13:01:02.237 I/flutter (25055): Received message progressApolloData: Download Completed 100%
+11-03 13:01:02.237 I/flutter (25055): Received message downloadApolloTime: Time taken to Download : 117.315 seconds. Apollo package is available in Downloads folder i.e, Downloads/Apollo.zip file
+----------------------------------------------------------------------------------
+--------- beginning of main
+11-03 13:06:58.856 E/Zygote  (29343): process_name_ptr:29343 com.example.mobilesoftwareg
+11-03 13:06:58.872 I/mobilesoftwareg(29343): Using CollectorTypeCC GC.
+11-03 13:06:58.878 E/mobilesoftwareg(29343): Not starting debugger since process cannot load the jdwp agent.
+11-03 13:06:58.881 D/nativeloader(29343): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-03 13:06:58.887 W/System.err(29343): android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+11-03 13:06:58.887 W/System.err(29343):         at libcore.io.Linux.open(Native Method)
+11-03 13:06:58.887 W/System.err(29343):         at libcore.io.ForwardingOs.open(ForwardingOs.java:568)
+11-03 13:06:58.887 W/System.err(29343):         at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+11-03 13:06:58.887 W/System.err(29343):         at libcore.io.ForwardingOs.open(ForwardingOs.java:568)
+11-03 13:06:58.887 W/System.err(29343):         at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8381)
+11-03 13:06:58.888 W/System.err(29343):         at android.system.Os.open(Os.java:500)
+11-03 13:06:58.888 W/System.err(29343):         at android.os.perfdebug.PerfDebugMonitorImpl.monitorVersionControl(PerfDebugMonitorImpl.java:206)
+11-03 13:06:58.888 W/System.err(29343):         at android.os.perfdebug.PerfDebugMonitorImpl.prepareMonitor(PerfDebugMonitorImpl.java:187)
+11-03 13:06:58.888 W/System.err(29343):         at android.app.ActivityThread.main(ActivityThread.java:8468)
+11-03 13:06:58.888 W/System.err(29343):         at java.lang.reflect.Method.invoke(Native Method)
+11-03 13:06:58.888 W/System.err(29343):         at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:561)
+11-03 13:06:58.888 W/System.err(29343):         at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:954)
+11-03 13:06:58.888 I/MessageMonitor(29343): Load libmiui_runtime
+11-03 13:06:58.908 D/CompatibilityChangeReporter(29343): Compat change id reported: 171979766; UID 10292; state: ENABLED
+11-03 13:06:58.925 D/nativeloader(29343): Configuring clns-4 for other apk /data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/lib/arm64:/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.mobilesoftwareg
+11-03 13:06:58.930 D/nativeloader(29343): Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
+11-03 13:06:58.931 I/Perf    (29343): Connecting to perf service.
+11-03 13:06:58.940 V/GraphicsEnvironment(29343): ANGLE Developer option for 'com.example.mobilesoftwareg' set to: 'default'
+11-03 13:06:58.940 V/GraphicsEnvironment(29343): ANGLE GameManagerService for com.example.mobilesoftwareg: false
+11-03 13:06:58.940 V/GraphicsEnvironment(29343): App is not on the allowlist for updatable production driver.
+11-03 13:06:58.942 I/ForceDarkHelperStubImpl(29343): initialize for com.example.mobilesoftwareg , ForceDarkOrigin
+11-03 13:06:58.943 D/nativeloader(29343): Load libforcedarkimpl.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+11-03 13:06:58.943 D/mobilesoftwareg(29343): JNI_OnLoad success
+11-03 13:06:58.943 I/MiuiForceDarkConfig(29343): setConfig density:2.156250, mainRule:0, secondaryRule:0, tertiaryRule:0
+11-03 13:06:58.945 D/NetworkSecurityConfig(29343): No Network Security Config specified, using platform default
+11-03 13:06:58.945 D/NetworkSecurityConfig(29343): No Network Security Config specified, using platform default
+11-03 13:06:58.975 W/libc    (29343): Access denied finding property "ro.vendor.df.effect.conflict"
+11-03 13:06:58.970 W/mobilesoftwareg(29343): type=1400 audit(0.0:33073): avc: denied { read } for name="u:object_r:vendor_displayfeature_prop:s0" dev="tmpfs" ino=15654 scontext=u:r:untrusted_app:s0:c36,c257,c512,c768 tcontext=u:object_r:vendor_displayfeature_prop:s0 tclass=file permissive=0 app=com.example.mobilesoftwareg
+11-03 13:06:58.990 D/nativeloader(29343): Load /data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk!/lib/arm64-v8a/libflutter.so using class loader ns clns-4 (caller=/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk): ok
+11-03 13:06:59.027 D/vulkan  (29343): searching for layers in '/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/lib/arm64'
+11-03 13:06:59.027 D/vulkan  (29343): searching for layers in '/data/app/~~-RchmD1QSGhqV292qy20BA==/com.example.mobilesoftwareg-wDCtqTKm2HGescH6ub-6GQ==/base.apk!/lib/arm64-v8a'
+11-03 13:06:59.039 I/AdrenoVK-0(29343): ===== BEGIN DUMP OF OVERRIDDEN SETTINGS =====
+11-03 13:06:59.039 I/AdrenoVK-0(29343): ===== END DUMP OF OVERRIDDEN SETTINGS =====
+11-03 13:06:59.039 I/AdrenoVK-0(29343): QUALCOMM build          : 3e33337ce3, I07ee46fc66
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Build Date              : 10/08/21
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Shader Compiler Version : EV031.35.01.10
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Local Branch            : 
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Remote Branch           : 
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Remote Branch           : 
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Reconstruct Branch      : 
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Build Config            : S P 10.0.7 AArch64
+11-03 13:06:59.039 I/AdrenoVK-0(29343): Driver Path             : /vendor/lib64/hw/vulkan.adreno.so
+11-03 13:06:59.047 I/flutter (29343): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(62)] Using the Impeller rendering backend (Vulkan).
+11-03 13:06:59.059 D/IS_CTS_MODE(29343): false
+11-03 13:06:59.060 D/MULTI_WINDOW_ENABLED(29343): false
+11-03 13:06:59.061 D/DecorView[](29343): getWindowModeFromSystem  windowmode is 1
+11-03 13:06:59.082 W/Activity(29343): Can request only one set of permissions at a time
+11-03 13:06:59.109 D/DecorView[](29343): getWindowModeFromSystem  windowmode is 1
+11-03 13:06:59.109 D/DecorView[](29343): updateDecorCaptionStatus windowMode is 1
+11-03 13:06:59.121 I/flutter (29343): DCHECKINIITinitState initState calls INIT_STATE
+--------- beginning of system
+11-03 13:06:59.129 D/FramePredict(29343): FramePredict init: false
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): QUALCOMM build                   : 3e33337ce3, I07ee46fc66
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): Build Date                       : 10/08/21
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): OpenGL ES Shader Compiler Version: EV031.35.01.10
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): Local Branch                     : 
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): Remote Branch                    : 
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): Remote Branch                    : 
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): Reconstruct Branch               : 
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): Build Config                     : S P 10.0.7 AArch64
+11-03 13:06:59.153 I/AdrenoGLES-0(29343): Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+11-03 13:06:59.155 I/AdrenoGLES-0(29343): PFP: 0x016ee201, ME: 0x00000000
+11-03 13:06:59.164 D/VRI[MainActivity](29343): vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4013 android.view.ViewRootImpl.doTraversal:2725 android.view.ViewRootImpl$TraversalRunnable.run:9812 android.view.Choreographer$CallbackRecord.run:1505 android.view.Choreographer$CallbackRecord.run:1513 
+11-03 13:06:59.164 D/SurfaceView(29343): UPDATE null, mIsCastMode = false
+11-03 13:06:59.165 W/libc    (29343): Access denied finding property "vendor.migl.debug"
+11-03 13:06:59.172 E/libEGL  (29343): pre_cache appList: com.sina.weibo,com.ss.android.article.news,com.taobao.taobao,com.smile.gifmaker,com.ss.android.ugc.aweme,com.tencent.mm,tv.danmaku.bili,,
+11-03 13:06:59.175 E/qdgralloc(29343): GetGpuPixelFormat: No map for format: 0x38
+11-03 13:06:59.175 E/AdrenoUtils(29343): <validate_memory_layout_input_parmas:1970>: Unknown Format 0
+11-03 13:06:59.175 E/AdrenoUtils(29343): <adreno_init_memory_layout:4720>: Memory Layout input parameter validation failed!
+11-03 13:06:59.175 E/qdgralloc(29343): GetGpuResourceSizeAndDimensions Graphics metadata init failed
+11-03 13:06:59.175 E/Gralloc4(29343): isSupported(1, 1, 56, 1, ...) failed with 1
+11-03 13:06:59.176 E/GraphicBufferAllocator(29343): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 1
+11-03 13:06:59.176 E/AHardwareBuffer(29343): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -1), handle=0x0
+11-03 13:06:59.177 E/qdgralloc(29343): GetGpuPixelFormat: No map for format: 0x38
+11-03 13:06:59.177 E/AdrenoUtils(29343): <validate_memory_layout_input_parmas:1970>: Unknown Format 0
+11-03 13:06:59.177 E/AdrenoUtils(29343): <adreno_init_memory_layout:4720>: Memory Layout input parameter validation failed!
+11-03 13:06:59.177 E/qdgralloc(29343): GetGpuResourceSizeAndDimensions Graphics metadata init failed
+11-03 13:06:59.177 E/Gralloc4(29343): isSupported(1, 1, 56, 1, ...) failed with 1
+11-03 13:06:59.177 E/GraphicBufferAllocator(29343): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 1
+11-03 13:06:59.177 E/AHardwareBuffer(29343): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -1), handle=0x0
+11-03 13:06:59.179 E/libboost(29343): fail to open node: No such file or directory
+11-03 13:06:59.275 I/System.out(29343): File '/storage/emulated/0/Download/Alta.zip' does exist.
+11-03 13:06:59.278 I/System.out(29343): File '/storage/emulated/0/Download/Apollo.zip' exists!
+11-03 13:06:59.278 I/flutter (29343): Received message FILE AVAILABLE ALTA : true
+11-03 13:06:59.278 I/flutter (29343): Received message FILE AVAILABLE APOLLO : true
+11-03 13:06:59.291 D/DecorView[](29343): getWindowModeFromSystem  windowmode is 1
+11-03 13:06:59.291 D/DecorView[](29343): updateDecorCaptionStatus windowMode is 1
+11-03 13:06:59.303 D/VRI[MainActivity](29343): vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4013 android.view.ViewRootImpl.doTraversal:2725 android.view.ViewRootImpl$TraversalRunnable.run:9812 android.view.Choreographer$CallbackRecord.run:1505 android.view.Choreographer$CallbackRecord.run:1513 
+11-03 13:06:59.303 D/SurfaceView(29343): UPDATE Surface(name=SurfaceView[com.example.mobilesoftwareg/com.example.mobilesoftwareg.MainActivity])/@0x2bd2119, mIsProjectionMode = false
+11-03 13:06:59.304 D/VRI[MainActivity](29343): vri.Setup new sync id=0 syncSeqId=0
+11-03 13:06:59.306 D/mobilesoftwareg(29343): MiuiProcessManagerServiceStub setSchedFifo
+11-03 13:06:59.306 I/MiuiProcessManagerImpl(29343): setSchedFifo pid:29343, mode:3
+11-03 13:06:59.317 E/perf_hint(29343): Session creation failed, mPreferredRateNanos: -1
+11-03 13:06:59.318 D/VRI[MainActivity](29343): vri.reportDrawFinished syncSeqId=0 android.view.ViewRootImpl.lambda$createSyncIfNeeded$4$android-view-ViewRootImpl:4081 android.view.ViewRootImpl$$ExternalSyntheticLambda2.run:6 android.os.Handler.handleCallback:942 android.os.Handler.dispatchMessage:99 android.os.Looper.loopOnce:211 
+11-03 13:06:59.411 D/CompatibilityChangeReporter(29343): Compat change id reported: 160794467; UID 10292; state: ENABLED
+11-03 13:06:59.431 D/DecorView[](29343): getWindowModeFromSystem  windowmode is 1
+11-03 13:06:59.431 D/DecorView[](29343): updateDecorCaptionStatus windowMode is 1
+11-03 13:06:59.533 D/DecorView[](29343): onWindowFocusChanged hasWindowFocus true
+11-03 13:06:59.533 I/HandWritingStubImpl(29343): refreshLastKeyboardType: 1
+11-03 13:06:59.533 I/HandWritingStubImpl(29343): getCurrentKeyboardType: 1
+11-03 13:06:59.551 W/AidlConversion(29343): aidl2legacy_AudioChannelLayout_audio_channel_mask_t: no legacy output audio_channel_mask_t found for AudioChannelLayout{layoutMask: 16}
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 452984832
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 469762048
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 486539264
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 352321536
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 369098752
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 117440512
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 503316482
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 503316496
+11-03 13:06:59.552 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 503316736
+11-03 13:06:59.633 W/AidlConversion(29343): aidl2legacy_AudioChannelLayout_audio_channel_mask_t: no legacy output audio_channel_mask_t found for AudioChannelLayout{layoutMask: 16}
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 452984832
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 469762048
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 486539264
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 352321536
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 369098752
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 117440512
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 503316482
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 503316496
+11-03 13:06:59.634 W/AudioSystem-JNI(29343): Unknown native audio format for JAVA API: 503316736
+11-03 13:06:59.636 I/HandWritingStubImpl(29343): getCurrentKeyboardType: 1
+11-03 13:06:59.704 D/DecorView[](29343): onWindowFocusChanged hasWindowFocus false
+11-03 13:06:59.783 D/CompatibilityChangeReporter(29343): Compat change id reported: 78294732; UID 10292; state: ENABLED
+11-03 13:06:59.803 V/MediaPlayer(29343): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-03 13:06:59.803 V/MediaPlayer(29343): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-03 13:06:59.971 W/MediaPlayer(29343): mediaplayer went away with unhandled events
+11-03 13:06:59.971 D/DecorView[](29343): onWindowFocusChanged hasWindowFocus true
+11-03 13:06:59.972 I/HandWritingStubImpl(29343): refreshLastKeyboardType: 1
+11-03 13:06:59.972 I/HandWritingStubImpl(29343): getCurrentKeyboardType: 1
+11-03 13:07:04.575 D/ProfileInstaller(29343): Skipping profile installation for com.example.mobilesoftwareg
+11-03 13:07:11.449 W/MirrorManager(29343): this model don't Support
+11-03 13:07:12.145 I/LongScreenshotUtils(29343):  focus:true
+11-03 13:07:12.154 I/LongScreenshotUtils(29343): current ratio width:1.0, height:1.0
+
