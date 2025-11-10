@@ -8,3 +8,116 @@ URLS : netsh trace start capture=yes tracefile=C:\temp\httptrace.etl maxsize=102
 Connections : netstat -nab -p TCP | findstr /C:"ESTABLISHED" /C:"LISTENING" /C:"TIME_WAIT" /C:"CLOSE_WAIT" | findstr /V /C:"127.0.0.1" /C:"[::1]"
 User Log : Get-WinEvent -LogName Security -FilterXPath "*[System[(EventID=4624) and TimeCreated[timediff(@SystemTime) <= 86400000]]]" | Format-List TimeCreated, Message
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+┌──(codex㉿codex)-[~]
+└─$ adb shell getprop ro.build.fingerprint
+samsung/beyond1lte/beyond1lte:13/TQ3A.230805.001/eng.lineage.20231012.120045:userdebug/release-keys
+----------------
+--------- beginning of main
+11-10 17:20:50.817 E/mobilesoftware( 9934): Not starting debugger since process cannot load the jdwp agent.
+11-10 17:20:50.893 D/Typeface( 9934): Invalid or same font: 
+11-10 17:20:51.092 W/mobilesoftwareg( 9934): type=1400 audit(0.0:532): avc: denied { read } for name="max_map_count" dev="proc" ino=97705 scontext=u:r:untrusted_app:s0:c189,c256,c512,c768 tcontext=u:object_r:proc_max_map_count:s0 tclass=file permissive=0
+11-10 17:20:51.112 I/GPUD    ( 9934): @gpudInitialize: successfully initialized with GL, dbg=0 mmdump_dbg=0 mmpath_dbg=0
+11-10 17:20:51.180 I/flutter ( 9934): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+11-10 17:20:51.452 I/SurfaceFactory( 9934): [static] sSurfaceFactory = com.mediatek.view.impl.SurfaceFactoryImpl@3df16d4
+--------- beginning of system
+11-10 17:20:51.453 D/AppResolutionTuner( 9934): loadTunerAppList + 
+11-10 17:20:51.463 D/AppResolutionTuner( 9934): loadTunerAppList - 
+11-10 17:20:51.463 D/SurfaceExt( 9934): initResolutionTunner, mPackageName:com.example.mobilesoftwareg,mContainPackageName:falsemXScaleValue:1.0,mYScaleValue:1.0
+11-10 17:20:51.537 W/Activity( 9934): Can request only one set of permissions at a time
+11-10 17:20:51.559 D/ViewRootImpl[MainActivity]( 9934): hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+11-10 17:20:51.570 V/PhoneWindow( 9934): DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@8aa2522, this = DecorView@20e5bb3[MainActivity]
+11-10 17:20:51.577 I/flutter ( 9934): DCHECKINIITinitState initState calls INIT_STATE
+11-10 17:20:51.596 I/Choreographer( 9934): Skipped 37 frames!  The application may be doing too much work on its main thread.
+11-10 17:20:51.652 D/Surface ( 9934): Surface::connect(this=0x776b77b000,api=1)
+11-10 17:20:51.652 D/Surface ( 9934): Surface::connect(this=0x776f36d000,api=1)
+11-10 17:20:51.653 D/Surface ( 9934): Surface::setBufferCount(this=0x776f36d000,bufferCount=3)
+11-10 17:20:51.657 W/Gralloc3( 9934): mapper 3.x is not supported
+11-10 17:20:51.661 E/ion     ( 9934): ioctl c0044901 failed with code -1: Invalid argument
+11-10 17:20:55.619 D/ViewRootImpl( 9934): setSurfaceViewCreated, created:true
+11-10 17:20:55.621 D/Surface ( 9934): Surface::disconnect(this=0x776b77b000,api=1)
+11-10 17:20:55.623 D/Surface ( 9934): Surface::connect(this=0x776b77b000,api=1)
+11-10 17:20:55.630 I/GED     ( 9934): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+11-10 17:20:55.677 I/System.out( 9934): File '/storage/emulated/0/Download/Alta.zip' does not exist.
+11-10 17:20:55.685 I/System.out( 9934): File '/storage/emulated/0/Download/Apollo.zip' does not exist.
+11-10 17:20:55.685 I/flutter ( 9934): Received message FILE AVAILABLE ALTA : false
+11-10 17:20:55.686 I/flutter ( 9934): Received message FILE AVAILABLE APOLLO : false
+11-10 17:20:55.700 I/Choreographer( 9934): Skipped 243 frames!  The application may be doing too much work on its main thread.
+11-10 17:20:55.722 I/GED     ( 9934): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+11-10 17:20:55.725 D/Surface ( 9934): Surface::disconnect(this=0x776b77b000,api=1)
+11-10 17:20:55.726 D/ViewRootImpl( 9934): setSurfaceViewCreated, created:false
+11-10 17:20:55.726 D/Surface ( 9934): Surface::disconnect(this=0x776b77b000,api=-1)
+11-10 17:20:55.734 V/PhoneWindow( 9934): DecorView setVisiblity: visibility = 4, Parent = android.view.ViewRootImpl@8aa2522, this = DecorView@20e5bb3[MainActivity]
+11-10 17:20:56.085 D/Surface ( 9934): Surface::disconnect(this=0x776f36d000,api=1)
+11-10 17:20:56.301 I/GED     ( 9934): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+11-10 17:20:56.301 I/chatty  ( 9934): uid=10189(com.example.mobilesoftwareg) identical 1 line
+11-10 17:20:56.302 I/GED     ( 9934): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 2, oppidx_max 2, oppidx_min 0
+11-10 17:20:56.392 W/FlutterJNI( 9934): Tried to send a platform message to Flutter, but FlutterJNI was detached from native C++. Could not send. Channel: /connectNativeLevel. Response ID: 11
+11-10 17:20:56.400 D/View    ( 9934): [Warning] assignParent to null: this = DecorView@20e5bb3[MainActivity]
+11-10 17:20:56.410 V/MediaPlayer( 9934): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-10 17:20:56.410 V/MediaPlayer( 9934): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-10 17:20:56.410 D/MediaPlayer( 9934): _release native called
+11-10 17:20:56.519 D/MediaPlayer( 9934): _release native finished
+11-10 17:20:56.524 W/MediaPlayer( 9934): mediaplayer went away with unhandled events
+11-10 17:20:57.117 D/ProfileInstaller( 9934): Installing profile for com.example.mobilesoftwareg
+11-10 17:21:01.467 D/MediaPlayer( 9934): finalize() native_finalize called
+11-10 17:21:01.467 D/MediaPlayer( 9934): finalize() native_finalize finished
+11-10 17:22:51.236 W/ActivityThread( 9934): handleWindowVisibility: no activity for token android.os.BinderProxy@60ef4df
+11-10 17:22:51.284 I/flutter ( 9934): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+11-10 17:22:51.311 W/Activity( 9934): Can request only one set of permissions at a time
+11-10 17:22:51.318 V/PhoneWindow( 9934): DecorView setVisiblity: visibility = 4, Parent = null, this = DecorView@e07373[]
+11-10 17:22:51.319 D/ViewRootImpl[MainActivity]( 9934): hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+11-10 17:22:51.323 V/PhoneWindow( 9934): DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@9a53c2e, this = DecorView@e07373[MainActivity]
+11-10 17:22:51.333 I/flutter ( 9934): DCHECKINIITinitState initState calls INIT_STATE
+11-10 17:22:51.379 D/Surface ( 9934): Surface::connect(this=0x776b60e000,api=1)
+11-10 17:22:51.384 D/Surface ( 9934): Surface::setBufferCount(this=0x776b60e000,bufferCount=3)
+11-10 17:22:51.390 D/Surface ( 9934): Surface::connect(this=0x776b669000,api=1)
+11-10 17:22:51.475 D/ViewRootImpl( 9934): setSurfaceViewCreated, created:true
+11-10 17:22:51.476 D/Surface ( 9934): Surface::disconnect(this=0x776b669000,api=1)
+11-10 17:22:51.478 D/Surface ( 9934): Surface::connect(this=0x776b669000,api=1)
+11-10 17:22:51.506 I/System.out( 9934): File '/storage/emulated/0/Download/Alta.zip' does not exist.
+11-10 17:22:51.513 I/System.out( 9934): File '/storage/emulated/0/Download/Apollo.zip' does not exist.
+11-10 17:22:51.514 I/flutter ( 9934): Received message FILE AVAILABLE ALTA : false
+11-10 17:22:51.515 I/flutter ( 9934): Received message FILE AVAILABLE APOLLO : false
+11-10 17:22:52.689 V/PhoneWindow( 9934): DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@9a53c2e, this = DecorView@e07373[MainActivity]
+11-10 17:22:52.693 V/MediaPlayer( 9934): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-10 17:22:52.693 V/MediaPlayer( 9934): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-10 17:22:52.693 D/MediaPlayer( 9934): _release native called
+11-10 17:22:52.735 D/MediaPlayer( 9934): _release native finished
+11-10 17:22:52.741 W/MediaPlayer( 9934): mediaplayer went away with unhandled events
+11-10 17:22:52.741 W/MediaPlayer( 9934): mediaplayer went away with unhandled events
+11-10 17:22:53.889 D/ipAddress ( 9934): 192.168.1.100
+11-10 17:22:53.889 D/ipAddress ipAddress ( 9934): 192.168.1.100
+11-10 17:22:53.890 I/flutter ( 9934): serverData -> server started : http://192.168.1.100:8080 port
+11-10 17:22:53.901 W/System.err( 9934): SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+11-10 17:22:53.901 W/System.err( 9934): SLF4J: Defaulting to no-operation (NOP) logger implementation
+11-10 17:22:53.901 W/System.err( 9934): SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+11-10 17:22:53.912 D/APPDownloadDETAILS Server start at -> ( 9934): http://192.168.1.100:8080 port
+11-10 17:22:53.926 D/MODULES -> ( 9934): /storage/emulated/0/Download/Apollo.zip
+11-10 17:22:53.940 I/mobilesoftware( 9934): Waiting for a blocking GC ProfileSaver
+11-10 17:22:53.952 I/mobilesoftware( 9934): WaitForGcToComplete blocked ProfileSaver on HeapTrim for 12.169ms
+11-10 17:22:55.547 I/flutter ( 9934): serverData -> server stopped
+11-10 17:22:56.607 D/APPDownloadDETAILS START TIME -> ( 9934): 2025-11-10T17:22:56.607
+11-10 17:22:56.609 D/FILE EXIST -> ( 9934): File not exist
+11-10 17:22:56.610 D/        ( 9934): https://mobilesoftwareupdate.blob.core.windows.net/temppackages/HS1gb.zip?sp=r&st=2025-10-14T13:20:39Z&se=2026-10-14T21:35:39Z&spr=https&sv=2024-11-04&sr=b&sig=Nlv0kLT9weiWNkJcZ9uU6IhhkVqlVDN3pAjgkUaZ09M%3D
+11-10 17:22:56.611 D/        ( 9934): /storage/emulated/0/Download/Apollo.zip
+11-10 17:22:56.611 D/        ( 9934): [G{Active}@af31854]
+11-10 17:22:56.618 D/NetworkSecurityConfig( 9934): No Network Security Config specified, using platform default
+11-10 17:22:56.854 I/System.out( 9934): [socket]:check permission begin!
+11-10 17:22:56.855 W/System  ( 9934): ClassLoader referenced unknown path: system/framework/mediatek-cta.jar
+11-10 17:22:56.857 I/System.out( 9934): [socket] e:java.lang.ClassNotFoundException: com.mediatek.cta.CtaUtils
+11-10 17:22:58.068 D/MediaPlayer( 9934): finalize() native_finalize called
+11-10 17:22:58.068 D/MediaPlayer( 9934): finalize() native_finalize finished
+--------- beginning of crash
+11-10 17:22:58.795 E/AndroidRuntime( 9934): FATAL EXCEPTION: DefaultDispatcher-worker-1
+11-10 17:22:58.795 E/AndroidRuntime( 9934): Process: com.example.mobilesoftwareg, PID: 9934
+11-10 17:22:58.795 E/AndroidRuntime( 9934): java.io.IOException: NO_content length in response DATA
+11-10 17:22:58.795 E/AndroidRuntime( 9934): 	at C.m.c(SourceFile:71)
+11-10 17:22:58.795 E/AndroidRuntime( 9934): 	at O0.a.p(SourceFile:9)
+11-10 17:22:58.795 E/AndroidRuntime( 9934): 	at l2.J.run(SourceFile:119)
+11-10 17:22:58.795 E/AndroidRuntime( 9934): 	at q2.i.run(SourceFile:4)
+11-10 17:22:58.795 E/AndroidRuntime( 9934): 	at s2.i.run(SourceFile:3)
+11-10 17:22:58.795 E/AndroidRuntime( 9934): 	at s2.a.run(SourceFile:91)
+11-10 17:22:58.795 E/AndroidRuntime( 9934): 	Suppressed: q2.g: [s0{Cancelling}@c368767, Dispatchers.IO]
+11-10 17:22:58.836 I/Process ( 9934): Sending signal. PID: 9934 SIG: 9
+
+
