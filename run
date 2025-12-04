@@ -8,3 +8,31 @@ URLS : netsh trace start capture=yes tracefile=C:\temp\httptrace.etl maxsize=102
 Connections : netstat -nab -p TCP | findstr /C:"ESTABLISHED" /C:"LISTENING" /C:"TIME_WAIT" /C:"CLOSE_WAIT" | findstr /V /C:"127.0.0.1" /C:"[::1]"
 User Log : Get-WinEvent -LogName Security -FilterXPath "*[System[(EventID=4624) and TimeCreated[timediff(@SystemTime) <= 86400000]]]" | Format-List TimeCreated, Message
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$target = Read-Host "Enter IP address, hostname, or server name"
+$startPort = 1
+$endPort = 65535
+$openPorts = 0
+$closedPorts = 0
+Write-Host "Scanning ports on $target ... This may take a while." -ForegroundColor Yellow
+for ($port = $startPort; $port -le $endPort; $port++) {
+    try {
+        $connection = Test-NetConnection -ComputerName $target -Port $port -WarningAction SilentlyContinue -InformationLevel Quiet   
+        if ($connection -eq $true) {
+            Write-Host "OPEN   : Port $port" -ForegroundColor Green
+            $openPorts++
+        } else {
+            # Closed or filtered
+            # Uncomment the next line if you want to see closed ports also
+            # Write-Host "CLOSED : Port $port" -ForegroundColor Red
+            $closedPorts++
+        }
+    }
+    catch {
+        $closedPorts++
+    }
+}
+Write-Host "`n==================================================" -ForegroundColor Cyan
+Write-Host "SCAN SUMMARY FOR: $target" -ForegroundColor Cyan
+Write-Host "Open Ports  : $openPorts" -ForegroundColor Green
+Write-Host "Closed Ports: $closedPorts" -ForegroundColor Red
+Write-Host "==================================================" -ForegroundColor Cyan
