@@ -1,15 +1,12 @@
-sudo apt update && sudo apt install -y llvm binutils && \
+sudo apt update && sudo apt install -y jadx binutils && \
+jadx -d output app.apk && \
 (
-echo "==== OBJC_CLASS ====" &&
-llvm-nm Runner | grep OBJC_CLASS &&
-echo -e "\n==== PLUGINS ====" &&
-strings Runner | grep -i "plugin" &&
-echo -e "\n==== URL ====" &&
-strings Runner | grep -i "url" &&
-echo -e "\n==== HTTP ====" &&
-strings Runner | grep -i "http" &&
-echo -e "\n==== SEC ====" &&
-strings Runner | grep -i "sec" &&
-echo -e "\n==== SWIFT SYMBOLS ====" &&
-llvm-nm Runner | grep "\$s"
-) > poc_obfuscation.txt
+echo "==== CLASS NAMES ====" &&
+grep -r "class " output/ | head -n 50 &&
+echo -e "\n==== METHOD NAMES ====" &&
+grep -r "void " output/ | head -n 50 &&
+echo -e "\n==== PACKAGE STRUCTURE ====" &&
+ls output/sources/ | head -n 50 &&
+echo -e "\n==== STRINGS (HTTP/API/KEY) ====" &&
+strings app.apk | grep -Ei "http|api|token|key" | head -n 50
+) > apk_obfuscation_poc.txt
